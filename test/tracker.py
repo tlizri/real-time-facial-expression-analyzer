@@ -6,7 +6,7 @@ Created on Wed Apr  7 13:37:22 2021
 """
 from cv2 import TrackerGOTURN_create, VideoCapture, imshow, waitKey, destroyAllWindows, cvtColor, equalizeHist, CascadeClassifier, COLOR_RGB2GRAY, getTickCount, getTickFrequency, rectangle
 
-PATH = 'C:/Users/tlizr/.spyder-py3'
+PATH = '/root'
 VJCLASSIFIER = '/haarcascade_frontalface_default.xml'   # haarcascade_frontalface_default.xml
                                                         # haarcascade_frontalface_alt.xml
                                                         # haarcascade_frontalface_alt2.xml
