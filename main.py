@@ -14,14 +14,14 @@ from tensorflow.keras.models import load_model
 from numpy import argmax, reshape
 from sys import exit
 # --------- VARIABLES GLOBALES ------------------------------------------------
-ROOT = 'C:/Users/tlizr/.spyder-py3'                                             # Dirección principal
+ROOT = '/root'                                                                  # Dirección principal
 PATH_CNN = "/CNN"                                                               # Dirección de los clasificadores convolucionales
 PATH_VIOLA_JONES = '/Viola-Jones'                                               # Dirección de los clasificadores del algoritmo VIOLA-JONES
 VIOLA_JONES = "/haarcascade_frontalface_default.xml"                            # haarcascade_frontalface_default.xml
                                                                                 # haarcascade_frontalface_alt.xml
                                                                                 # haarcascade_frontalface_alt2.xml
                                                                                 # haarcascade_frontalface_alt_tree.xml
-CNN = "/efficientnet_learningrate=0.001_3classes_epoch=20_time12.2_filt_balan.h5"
+CNN = "/file.h5"
 LOFFSET = 50                                                                    # 80 Offset para el lado del cuadrado
 YCOFFSET = 17                                                                   # 27 Negativo hacia arriba
 XCOFFSET = 0                                                                    # -13 Negativo hacia izquierda
