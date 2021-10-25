@@ -10,9 +10,9 @@ import os
 from numpy import ones, shape, zeros, int8, concatenate, reshape, argmax
 from tensorflow.keras.models import load_model
 from cv2 import CascadeClassifier, cvtColor, equalizeHist, COLOR_RGB2GRAY, resize, INTER_LINEAR, imread
-ROOT = 'C:/Users/tlizr/.spyder-py3'
+ROOT = '/root'
 PATH_VIOLA_JONES = '/Viola-Jones/haarcascade_frontalface_default.xml'
-PATH_CNN = '/CNN/efficientnet_learningrate=0.001_3classes_epoch=20_time12.2_filt_balan.h5'
+PATH_CNN = '/CNN/file.h5'
 LOFFSET = 0
 YCOFFSET = 0
 XCOFFSET = 0
@@ -20,15 +20,15 @@ RESOLUTION = (1280, 720)
 INPUT_SHAPE = 224
 
 x_positivo = []
-for root, _, filenames in os.walk('D:/tlizr/Pictures/Camera Roll/positivo'):
+for root, _, filenames in os.walk(ROOT + '/test_images/positivo'):
     for filename in filenames:
         x_positivo.append(os.path.join(root, filename))
 x_negativo = []
-for root, _, filenames in os.walk('D:/tlizr/Pictures/Camera Roll/negativo'):
+for root, _, filenames in os.walk(ROOT + '/test_images/negativo'):
     for filename in filenames:
         x_negativo.append(os.path.join(root, filename))
 x_neutro = []
-for root, _, filenames in os.walk('D:/tlizr/Pictures/Camera Roll/neutro'):
+for root, _, filenames in os.walk(ROOT + '/test_images/neutro'):
     for filename in filenames:
         x_neutro.append(os.path.join(root, filename))
 
