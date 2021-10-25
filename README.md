@@ -1,1 +1,2 @@
 # real-time-facial-expression-analyzer
+This project recounts the development and perform of a facial expression analysis using real-time software. Focused on computer-vision, deep learning and object tracking theory, it can be applied in systems that require feedback to improve educational activities, medical or in the recent self-driving vehicles. For that purpose, an extensive study on the subject of convolutional neural networks, Viola & Jones algorithm and object trackers.
