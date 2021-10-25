@@ -12,17 +12,17 @@ FONT_HERSHEY_COMPLEX,LINE_AA, CAP_DSHOW, resize,INTER_LINEAR, imread, imshow
 from tensorflow.keras.models import load_model
 from numpy import argmax, reshape
 
-ROOT = 'C:/Users/tlizr/.spyder-py3'                                             # Dirección principal
+ROOT = '/root'                                                                  # Dirección principal
 PATH_VIOLA_JONES = '/Viola-Jones'                                               # Dirección de los clasificadores del algoritmo VIOLA-JONES
 VIOLA_JONES = "/haarcascade_frontalface_default.xml" 
 
-print("Iniciando detector")                                                 # Entrada -> Objeto de camara web
-face_classifier = CascadeClassifier()                                       # Salida -> Objeto del detector Viola-Jones
+print("Iniciando detector")                                                     # Entrada -> Objeto de camara web
+face_classifier = CascadeClassifier()                                           # Salida -> Objeto del detector Viola-Jones
 face_classifier.load(ROOT + PATH_VIOLA_JONES + VIOLA_JONES)
 
-frame = imread("D:/tlizr/Pictures/Camera Roll/WIN_20210828_18_27_16_Pro.jpg")
-gray = cvtColor(frame, COLOR_RGB2GRAY)                                      # Entrada -> objeto del detector Viola-Jones, imagen
-gray = equalizeHist(gray)                                                   # Salida -> coordenadas x e y de la esquina superior izquierda, altura, anchura, numero de detecciones
+frame = imread(ROOT + "/test/image.jpg")
+gray = cvtColor(frame, COLOR_RGB2GRAY)                                          # Entrada -> objeto del detector Viola-Jones, imagen
+gray = equalizeHist(gray)                                                       # Salida -> coordenadas x e y de la esquina superior izquierda, altura, anchura, numero de detecciones
 faces = face_classifier.detectMultiScale(gray,
                                              scaleFactor = 2,
                                              minNeighbors = 3)
